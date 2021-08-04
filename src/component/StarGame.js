@@ -25,11 +25,11 @@ export class StarGame extends Component {
 			<div className="centerScreen">
 				<div className="invaderChoice">
 					<div className="invaderSelection">
-						<label className="label1" for="NoI" >Number of Inverders </label>
+						<label className="label1" for="NoI" >Number of Invaders </label>
 						<input onClick={this.props.changeNbInvader} type='number' min="0" max="20" id="NoI" />
 					</div>
 					<div className="invaderSelection">
-						<label className="label2" for="LoI" >Line of Inverders </label>
+						<label className="label2" for="LoI" >Line of Invaders </label>
 						<input onClick={this.props.changeNbLineOfInvader} type='number' min="0" max="20" id="LoI" />
 					</div>
 				</div>

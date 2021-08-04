@@ -154,7 +154,7 @@ class App extends React.Component {
 						});
 					}
 
-					invader.x += 2
+					invader.x += 4
 
 					if (invader.x >= GAME.window.max.w) {
 						goDown = true
