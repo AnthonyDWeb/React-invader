@@ -53,7 +53,9 @@ class App extends React.Component {
 					y : 0,
 				}
 			},
-			invaders: []
+			invaders: [],
+			nbInvader: "",
+			nbLineOfInvader: ""
 		}
 	}
 
@@ -122,6 +124,9 @@ class App extends React.Component {
 			})
 		})
 	}
+
+	changeNbInvader = (e) => {this.setState({nbInvader: parseInt(e.target.value)})};
+	changeNbLineOfInvader = (e) => {this.setState({nbLineOfInvader: parseInt(e.target.value)})};
 
 	thread = () => {
 		let { count, invaders, player } = this.state
@@ -203,7 +208,8 @@ class App extends React.Component {
 			} else {
 
 				for (let i = 0; i < invaders.length; i++) {
-					let invader = this.state.invaders[i]
+					let invader = invaders[i]
+					// let invader = this.state.invaders[i]
 
 					if (this.handleCollision({ type : "invader", entity : invader }, { type : "bullet", entity : player.fire })) {
 
@@ -264,9 +270,9 @@ class App extends React.Component {
 		let ID = 0
 		
 
-		for (let y = 0; y < 5; y++) {
+		for (let y = 1; y <= this.state.nbLineOfInvader; y++) {
 
-			for (let x = 0; x < 11; x++) {
+			for (let x = 1; x <= this.state.nbInvader ; x++) {
 
 				invaders.push({
 
@@ -302,7 +308,7 @@ class App extends React.Component {
 				<Header />
 				{
 					!this.state.isStarted
-						? <StarGame />			
+						? <StarGame changeNbInvader={this.changeNbInvader} changeNbLineOfInvader={this.changeNbLineOfInvader} />			
 						: this.state.isOver
 							? this.renderOver() 
 							:

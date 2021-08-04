@@ -2,14 +2,41 @@
   width: 15rem;
   margin: 15rem auto;
   color: #FFF;
+  text-align: center;
+  /* background-color: red; */
 }
 #root > div {
   user-select: none;
 }
 
+.invaderChoice{
+  margin-bottom: 2rem;
+}
+
+.invaderSelection{
+  display: flex;
+  margin: 0.5rem 2rem;
+  justify-content: left;
+  align-items: center;
+  /* background-color: royalblue; */
+}
+.invaderSelection input{
+  width: 50px;
+}
+.label1{
+  margin-right: 0.5rem;
+}
+.label2{
+  margin-right: 2.2rem;
+}
+
+/* .startGame{
+  text-align: center;
+} */
+
 .centerScreen {
-  width: 15rem;
-  margin: 15rem auto;
+  width: 17.5rem;
+  margin: 13rem 38rem ;
   color: white;
 }
 
